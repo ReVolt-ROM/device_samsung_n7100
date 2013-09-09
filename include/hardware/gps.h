@@ -228,8 +228,6 @@ typedef uint16_t AGpsStatusValue;
  */
 #define AGPS_RIL_INTERFACE      "agps_ril"
 
-<<<<<<< HEAD
-=======
 /**
  * The GPS chipset can use Psc for AGPS.
  */
@@ -240,7 +238,6 @@ typedef uint16_t AGpsStatusValue;
  */
 #define GPS_GEOFENCING_INTERFACE   "gps_geofencing"
 
->>>>>>> FETCH_HEAD
 /** Represents a location. */
 typedef struct {
     /** set to sizeof(GpsLocation) */
@@ -327,13 +324,9 @@ typedef struct {
     uint16_t mcc;
     uint16_t mnc;
     uint16_t lac;
-<<<<<<< HEAD
-    uint16_t foo; // Samsung magic
-=======
 #ifdef AGPS_USE_PSC
     uint16_t psc;
 #endif
->>>>>>> FETCH_HEAD
     uint32_t cid;
 } AGpsRefLocationCellID;
 
@@ -699,9 +692,6 @@ typedef struct {
      */
     void (*update_network_availability) (int avaiable, const char* apn);
 } AGpsRilInterface;
-<<<<<<< HEAD
-
-=======
 /**
  * GPS Geofence.
  *      There are 3 states associated with a Geofence: Inside, Outside, Unknown.
@@ -953,7 +943,6 @@ typedef struct {
      */
     void (*remove_geofence_area) (int32_t geofence_id);
 } GpsGeofencingInterface;
->>>>>>> FETCH_HEAD
 __END_DECLS
 
 #endif /* ANDROID_INCLUDE_HARDWARE_GPS_H */
