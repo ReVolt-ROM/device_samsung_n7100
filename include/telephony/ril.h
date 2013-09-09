@@ -18,10 +18,7 @@
 #define ANDROID_RIL_H 1
 
 #include <stdlib.h>
-<<<<<<< HEAD
-=======
 #include <stdint.h>
->>>>>>> FETCH_HEAD
 #ifndef FEATURE_UNIT_TEST
 #include <sys/time.h>
 #endif /* !FEATURE_UNIT_TEST */
@@ -30,11 +27,7 @@
 extern "C" {
 #endif
 
-<<<<<<< HEAD
-#define RIL_VERSION 7     /* Current version */
-=======
 #define RIL_VERSION 8     /* Current version */
->>>>>>> FETCH_HEAD
 #ifdef LEGACY_RIL
 #define RIL_VERSION_MIN 2 /* Minimum RIL_VERSION supported */
 #else
@@ -114,12 +107,8 @@ typedef enum {
     RADIO_TECH_EHRPD = 13,
     RADIO_TECH_LTE = 14,
     RADIO_TECH_HSPAP = 15, // HSPA+
-<<<<<<< HEAD
-    RADIO_TECH_GSM = 16 // Only supports voice
-=======
     RADIO_TECH_GSM = 16, // Only supports voice
     RADIO_TECH_DCHSPAP = 30
->>>>>>> FETCH_HEAD
 } RIL_RadioTechnology;
 
 // Do we want to split Data from Voice and the use
@@ -226,11 +215,7 @@ typedef struct {
                                            The unit is miliseconds.
                                            The value < 0 means no value is suggested.
                                            The value 0 means retry should be done ASAP.
-<<<<<<< HEAD
-                                           The value of MAX_INT(0x7fffffff) means no retry. */
-=======
                                            The value of INT_MAX(0x7fffffff) means no retry. */
->>>>>>> FETCH_HEAD
 #endif
     int             cid;        /* Context ID, uniquely identifies this call */
     int             active;     /* 0=inactive, 1=active/physical link down, 2=active/physical link up */
@@ -664,13 +649,10 @@ typedef struct {
     int bitErrorRate;    /* bit error rate (0-7, 99) as defined in TS 27.007 8.5 */
 } RIL_GW_SignalStrength;
 
-<<<<<<< HEAD
-=======
 typedef struct {
     int signalStrength;  /* Valid values are (0-31, 99) as defined in TS 27.007 8.5 */
     int bitErrorRate;    /* bit error rate (0-7, 99) as defined in TS 27.007 8.5 */
 } RIL_SignalStrengthWcdma;
->>>>>>> FETCH_HEAD
 
 typedef struct {
     int dbm;  /* Valid values are positive integers.  This value is the actual RSSI value
@@ -716,8 +698,6 @@ typedef struct {
                           * Reference: 3GPP TS 36.101 9.2, 9.3, A.4 */
 } RIL_LTE_SignalStrength;
 
-<<<<<<< HEAD
-=======
 typedef struct {
     int signalStrength;  /* Valid values are (0-31, 99) as defined in TS 27.007 8.5 */
     int rsrp;            /* The current Reference Signal Receive Power in dBm multipled by -1.
@@ -744,7 +724,6 @@ typedef struct {
                           * also: http://www.cellular-planningoptimization.com/2010/02/timing-advance-with-calculation.html */
 } RIL_LTE_SignalStrength_v8;
 
->>>>>>> FETCH_HEAD
 /* Deprecated, use RIL_SignalStrength_v6 */
 typedef struct {
     RIL_GW_SignalStrength   GW_SignalStrength;
@@ -759,8 +738,6 @@ typedef struct {
     RIL_LTE_SignalStrength  LTE_SignalStrength;
 } RIL_SignalStrength_v6;
 
-<<<<<<< HEAD
-=======
 typedef struct {
     RIL_GW_SignalStrength       GW_SignalStrength;
     RIL_CDMA_SignalStrength     CDMA_SignalStrength;
@@ -865,7 +842,6 @@ typedef struct {
   } CellInfo;
 } RIL_CellInfo;
 
->>>>>>> FETCH_HEAD
 /* Names of the CDMA info records (C.S0005 section 3.7.5) */
 typedef enum {
   RIL_CDMA_DISPLAY_INFO_REC,
@@ -3484,8 +3460,6 @@ typedef struct {
  */
 #define RIL_REQUEST_VOICE_RADIO_TECH 108
 
-<<<<<<< HEAD
-=======
 /**
  * RIL_REQUEST_GET_CELL_INFO_LIST
  *
@@ -3521,7 +3495,6 @@ typedef struct {
 #define RIL_REQUEST_SET_UNSOL_CELL_INFO_LIST_RATE 110
 
 
->>>>>>> FETCH_HEAD
 /* SAMSUNG REQUESTS */
 #define RIL_REQUEST_GET_CELL_BROADCAST_CONFIG 10002
 
@@ -4052,8 +4025,6 @@ typedef struct {
  */
 #define RIL_UNSOL_VOICE_RADIO_TECH_CHANGED 1035
 
-<<<<<<< HEAD
-=======
 /**
  * RIL_UNSOL_CELL_INFO_LIST
  *
@@ -4066,7 +4037,6 @@ typedef struct {
  */
 #define RIL_UNSOL_CELL_INFO_LIST 1036
 
->>>>>>> FETCH_HEAD
 /* SAMSUNG RESPONSE */
 #define SAMSUNG_UNSOL_RESPONSE_BASE 11000
 
